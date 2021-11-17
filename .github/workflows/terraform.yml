@@ -25,11 +25,6 @@ jobs:
       run: terraform init
       env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-          
-#     - name: Terraform Destroy
-#       run: terraform destroy --auto-approve
-#       env:
-#           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
 
     - name: Terraform Plan
@@ -64,3 +59,10 @@ jobs:
           
     - name: Project Done!!!
       run: echo SUCCESS!!!
+      
+      
+      
+#     - name: Terraform Destroy
+#       run: terraform destroy --auto-approve
+#       env:
+#           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
