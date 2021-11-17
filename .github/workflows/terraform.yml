@@ -34,8 +34,9 @@ jobs:
   terraform_apply:
     name: 'Terraform Apply'
     runs-on: ubuntu-latest
-    environment: 'prod'
     needs: terraform_plan
+    environment:
+      name: prod
     
     
     steps: 
