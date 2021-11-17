@@ -32,8 +32,7 @@ Follow to this steps:
 * Go to the secrets under repo and add your GCP Credentials by using the name GOOGLE_CREDENTIALS
 
 * Go to the settings and under Environment add 'apply_to_prod' , select checkbox 
-
-* 'Required reviewers' and there add the github names of users(who can approve to this project)
+'Required reviewers' and there add the github names of users(who can approve to this project)
 
 * Open the file 'main.tf' and specify GCS Bucket under backend(in order to save tfstate files in bucket)
 
