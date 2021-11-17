@@ -1,0 +1,41 @@
+ clear
+    2  yum install epel-release
+    3  sudo yum install epel-release
+    4  sudo amazon-linux-extras install epel
+    5  clear
+    6  yum install docker-ce
+    7  sudo yum install docker-ce
+    8  sidp yum install docker
+    9  sudo yum install docker
+   10  clear
+   11  yum install python-pip python-devel
+   12  sudo yum install python-pip python-devel
+   13  clear
+   14  sudo pip install --upgrade --user awscli
+   15  aws configure
+   16  clear
+   17  sudo cp -r ~/.aws /root
+   18  sudo yum install s3fs-fuse -y
+   19  clear
+   20  sudo s3fs mybucketnur3 /mnt/widget-factory -o allow_other -o default_acl=public-read -o
+   21  sudo s3fs mybucketnur3 /mnt/widget-factory -o allow_other -o default_acl=public-read
+   22  sudo mkdir /mnt/nurs3
+   23  sudo s3fs mybucketnur3 /mnt/nurs3 -o allow_other -o default_acl=public-read
+   24  ll /mnt/nurs3
+   25  vi /mnt/nurs3
+   26  vi /mnt/nurs3/index.html
+   27  clear
+   28  ll /mnt/nurs3
+   29  aws s3 ls nurs3
+   30  aws s3 ls mybucketnur3
+   31  docker run -d --name web1 -p 80:80 --mount type=bind,source=/mnt/nurs3,target=/usr/local/apache2/htdocs,readonly httpd:2.4    
+   32  sudo systemctl enable docker && sudo systemctl start docker && sudo systemtcl status docker
+   33  sudo service docker status
+   34  docker run -d --name web1 -p 80:80 --mount type=bind,source=/mnt/nurs3,target=/usr/local/apache2/htdocs,readonly httpd:2.4    
+   35  sudo docker run -d --name web1 -p 80:80 --mount type=bind,source=/mnt/nurs3,target=/usr/local/apache2/htdocs,readonly httpd:2.4
+   36  ip addr
+   37  df -h
+   38  cd /mnt/nurs3
+   39  ls
+   40  touch dijfidj
+   41  history
