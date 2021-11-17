@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: terraform_plan
     environment:
-      name: prod
+      name: apply_to_prodaction
     
     
     steps: 
