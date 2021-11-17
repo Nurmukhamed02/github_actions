@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "my-nur-bucket-kg"
+    prefix = "main"
+  }  
+
+
 provider "google" {
   project = "playground-s-11-0741ed3c"
   region = "us-central1"
