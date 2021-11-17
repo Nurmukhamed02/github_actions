@@ -23,10 +23,10 @@ jobs:
       env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           
-    - name: Terraform Destroy
-      run: terraform destroy --auto-approve
-      env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+#     - name: Terraform Destroy
+#       run: terraform destroy --auto-approve
+#       env:
+#           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
 
     - name: Terraform Plan
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: terraform_plan
     environment:
-      name: apply_to_prod1
+      name: apply_to_production
     
     
     steps: 
