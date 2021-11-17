@@ -3,13 +3,22 @@ terraform {
     bucket = "my-nur-bucket-kg"
     prefix = "main"
   }  
-
+  
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "3.53.0"
+    }
+  }
+}
 
 provider "google" {
-  project = "playground-s-11-0741ed3c"
-  region = "us-central1"
-  zone = "us-centrall1-c"
+  project = var.project_id
+  region  = var.region
+  zone    = var.main_zone
 }
+
+
 
 
 
