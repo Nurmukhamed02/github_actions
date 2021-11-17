@@ -52,7 +52,7 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve
       env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIAL }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           
     - name: Project Done!!!
       run: echo SUCCESS!!!
