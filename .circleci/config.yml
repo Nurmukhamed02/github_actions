@@ -38,13 +38,7 @@ jobs:
           name: "destroy"
           command: terraform destroy --auto-approve     
           
-  destroy:
-    docker:
-      - image: hashicorp/terraform
-    steps:
-      - run:
-          name: destroy terraform
-          command: terraform destroy --auto-approve
+
 workflows: 
   build:
     jobs:
@@ -52,7 +46,6 @@ workflows:
           context: GOOGLE_CREDENTIALS
 
       - hold: 
-
          type: approval 
           
       - build2:
@@ -60,7 +53,4 @@ workflows:
           requires: 
             - build
             - hold
-      - approval:
-          type: approval
-      - destroy:
-          context: GOOGLE_CREDENTIALS
+     
